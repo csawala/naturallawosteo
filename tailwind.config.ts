@@ -6,7 +6,12 @@ const config: Config = {
   ],
   plugins: [],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        cormorant: ['var(--font-cormorantGaramond)'],
+        josefin: ['var(--font-josefinSans)'],
+      },
+    },
   },
 };
 export default config;

@@ -1,9 +1,8 @@
 import Header from "@/components/Header"
 import type { Metadata } from "next"
-import { Inter } from "next/font/google"
-import "./globals.css"
 
-const inter = Inter({ subsets: ["latin"] })
+import { cormorantGaramond, josefinSans } from "./fonts"
+import "./globals.css"
 
 export const metadata: Metadata = {
   // description: "Something something",
@@ -16,8 +15,11 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html lang="en">
-      <body className={inter.className}>
+    <html
+      className={`${cormorantGaramond.variable} ${josefinSans.variable}`}
+      lang="en"
+    >
+      <body>
         <Header />
         {children}
       </body>
