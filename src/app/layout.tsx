@@ -2,6 +2,7 @@ import Header from "@/components/Header"
 import type { Metadata } from "next"
 
 import { cormorantGaramond, josefinSans } from "./fonts"
+import globalStyle from "./globalStyle.module.css"
 import "./globals.css"
 
 export const metadata: Metadata = {
@@ -16,7 +17,7 @@ export default function RootLayout({
 }>) {
   return (
     <html
-      className={`${cormorantGaramond.variable} ${josefinSans.variable}`}
+      className={`${cormorantGaramond.variable} ${josefinSans.variable} ${globalStyle.root}`}
       lang="en"
     >
       <body>

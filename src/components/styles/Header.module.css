@@ -1,0 +1,15 @@
+.container {
+  @apply flex justify-center items-center p-0 sm:px-4 sm:pt-5
+}
+
+.header {
+  @apply flex flex-row items-center justify-between min-h-16 sm:min-h-20 bg-white sm:rounded-full px-5 sm:px-12 py-2 sm:py-3 w-full drop-shadow-none sm:drop-shadow-md
+}
+
+.logo {
+  @apply h-11 w-28 sm:h-[60px] sm:w-[154px]
+}
+
+.buttonContainer {
+  @apply flex flex-row gap-x-2
+}
