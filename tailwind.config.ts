@@ -6,6 +6,17 @@ const config: Config = {
   ],
   plugins: [],
   theme: {
+    colors: {
+      black: "#000",
+      dark: "#282923",
+      light: "#F3FBEE",
+      primary: "#96BE83",
+      primaryDark: "#5A8546",
+      primaryDarkest: "#344D28",
+      purple: "#AB83BE",
+      white: "#FFF",
+      yellow: "#FFBF00",
+    },
     extend: {
       fontFamily: {
         cormorant: ['var(--font-cormorantGaramond)'],
