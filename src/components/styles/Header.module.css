@@ -7,9 +7,17 @@
 }
 
 .logo {
-  @apply h-11 w-28 sm:h-[60px] sm:w-[154px]
+  @apply h-11 w-28 sm:h-[60px] sm:w-[154px] mr-4
 }
 
 .buttonContainer {
   @apply flex flex-row gap-x-2
+}
+
+.buttons {
+  @apply hidden lg:flex lg:flex-row gap-x-2
+}
+
+.menu {
+  @apply flex lg:hidden
 }

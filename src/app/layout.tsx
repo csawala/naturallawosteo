@@ -20,7 +20,7 @@ export default function RootLayout({
       className={`${cormorantGaramond.variable} ${josefinSans.variable} ${globalStyle.root}`}
       lang="en"
     >
-      <body>
+      <body className={globalStyle.body}>
         <Header />
         {children}
       </body>

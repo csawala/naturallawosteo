@@ -1,3 +1,7 @@
 .root {
-  @apply bg-light
+  @apply flex bg-light h-screen
+}
+
+.body {
+  @apply flex flex-col-reverse sm:flex-col
 }
