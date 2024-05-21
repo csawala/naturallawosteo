@@ -5,6 +5,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 import LogoWithLabel from "../../public/logoWithLabel.png"
 import Button from "./Button"
+import MenuIcon from "./Icons/MenuIcon"
 import style from "./styles/Header.module.css"
 
 const Header = () => {
@@ -36,7 +37,7 @@ const Header = () => {
 
           <div className={style.menu}>
             <Button onClick={handleGoToAbout} variant="text">
-              MENU
+              <MenuIcon />
             </Button>
           </div>
         </div>
