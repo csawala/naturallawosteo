@@ -18,6 +18,14 @@
   @apply hidden lg:flex lg:flex-row gap-x-2
 }
 
-.menu {
+.menuContainer {
   @apply flex lg:hidden
+}
+
+.menu {
+  @apply flex flex-col gap-y-2 bg-white rounded-md border
+}
+
+.menuButton {
+  @apply py-3 px-4 items-center justify-center text-sm
 }

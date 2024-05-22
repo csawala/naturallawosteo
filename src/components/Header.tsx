@@ -1,14 +1,14 @@
 "use client"
 
-import Image from "next/image"
-
 import {
   Popover,
   PopoverButton,
   PopoverPanel,
   Transition,
 } from "@headlessui/react"
+import Image from "next/image"
 import { useRouter } from "next/navigation"
+
 import LogoWithLabel from "../../public/logoWithLabel.png"
 import Button from "./Button"
 import MenuIcon from "./Icons/MenuIcon"
@@ -19,6 +19,10 @@ const Header = () => {
   const handleGoToBook = () => router.push("book")
   const handleGoToAbout = () => router.push("about")
   const handleGoToHome = () => router.push("/")
+  const handleNavigate = (close: () => void, path: string) => {
+    router.push(path)
+    close()
+  }
 
   return (
     <section className={style.container}>
@@ -44,7 +48,7 @@ const Header = () => {
           </div>
           <Button onClick={handleGoToBook}>Book</Button>
 
-          <div className={style.menu}>
+          <div className={style.menuContainer}>
             <Popover className="relative items-center">
               <PopoverButton className="items-center justify-center p-2">
                 <MenuIcon />
@@ -59,26 +63,30 @@ const Header = () => {
               >
                 <PopoverPanel
                   anchor={{ to: "top end", gap: 8 }}
-                  className="flex flex-col gap-y-2 bg-white rounded-md border"
+                  className={style.menu}
                 >
-                  <button
-                    className="py-3 px-4 items-center justify-center text-sm"
-                    onClick={handleGoToAbout}
-                  >
-                    About
-                  </button>
-                  <button
-                    className="py-3 px-4 items-center justify-center text-sm"
-                    onClick={handleGoToAbout}
-                  >
-                    What is Osteopathy?
-                  </button>
-                  <button
-                    className="py-3 px-4 items-center justify-center text-sm"
-                    onClick={handleGoToAbout}
-                  >
-                    Frequently Asked Questions
-                  </button>
+                  {({ close }) => (
+                    <>
+                      <button
+                        className={style.menuButton}
+                        onClick={() => handleNavigate(close, "about")}
+                      >
+                        About
+                      </button>
+                      <button
+                        className={style.menuButton}
+                        onClick={() => handleNavigate(close, "osteopathy")}
+                      >
+                        What is Osteopathy?
+                      </button>
+                      <button
+                        className={style.menuButton}
+                        onClick={() => handleNavigate(close, "faq")}
+                      >
+                        Frequently Asked Questions
+                      </button>
+                    </>
+                  )}
                 </PopoverPanel>
               </Transition>
             </Popover>
