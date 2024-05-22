@@ -29,3 +29,7 @@
 .menuButton {
   @apply py-3 px-4 items-center justify-center text-sm
 }
+
+.menuOverlay {
+  @apply fixed -top-5 -left-4 right-0 bottom-0 bg-black/15 h-screen w-screen
+}

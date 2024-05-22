@@ -3,6 +3,7 @@
 import {
   Popover,
   PopoverButton,
+  PopoverOverlay,
   PopoverPanel,
   Transition,
 } from "@headlessui/react"
@@ -49,10 +50,11 @@ const Header = () => {
           <Button onClick={handleGoToBook}>Book</Button>
 
           <div className={style.menuContainer}>
-            <Popover className="relative items-center">
+            <Popover className="relative">
               <PopoverButton className="items-center justify-center p-2">
                 <MenuIcon />
               </PopoverButton>
+              <PopoverOverlay className={style.menuOverlay} />
               <Transition
                 enter="transition-opacity duration-300"
                 enterFrom="opacity-0"
