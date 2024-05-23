@@ -30,6 +30,7 @@
   @apply py-3 px-4 items-center justify-center text-sm
 }
 
+/* small screens need overlay positions reversed due to reverse-row */
 .menuOverlay {
-  @apply fixed -top-5 -left-4 right-0 bottom-0 bg-black/15 h-screen w-screen
+  @apply fixed bottom-0 right-0 md:-top-5 md:-left-4 md:right-0 md:bottom-0 bg-black/15 h-screen w-screen
 }
