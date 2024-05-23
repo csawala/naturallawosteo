@@ -1,11 +1,15 @@
 .root {
-  @apply flex bg-light h-screen
+  @apply flex bg-light h-screen w-screen
 }
 
 .body {
-  @apply flex flex-col-reverse sm:flex-col
+  @apply flex flex-col-reverse sm:flex-col w-full
 }
 
-.child {
-  @apply flex items-start h-full
+.main {
+  @apply flex items-start h-full w-full
+}
+
+.page {
+  @apply flex flex-col w-full items-center justify-between px-6 py-8 max-w-screen-xl mx-auto
 }

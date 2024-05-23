@@ -3,7 +3,7 @@
 }
 
 .header {
-  @apply flex flex-row items-center justify-between min-h-16 sm:min-h-20 bg-white sm:rounded-full px-5 sm:px-12 py-2 sm:py-3 w-full drop-shadow-none sm:drop-shadow-md
+  @apply flex flex-row items-center justify-between min-h-16 sm:min-h-20 max-w-screen-xl bg-white sm:rounded-full px-5 sm:px-12 py-2 sm:py-3 w-full drop-shadow-none sm:drop-shadow-md mx-auto
 }
 
 .logo {
@@ -23,7 +23,7 @@
 }
 
 .menu {
-  @apply flex flex-col gap-y-2 bg-white rounded-md border
+  @apply flex flex-col gap-y-2 bg-white rounded-md
 }
 
 .menuButton {

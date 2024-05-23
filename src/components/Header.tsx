@@ -26,7 +26,7 @@ const Header = () => {
   }
 
   return (
-    <section className={style.container}>
+    <nav className={style.container}>
       <div className={style.header}>
         <button onClick={handleGoToHome}>
           <Image
@@ -95,7 +95,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </section>
+    </nav>
   )
 }
 

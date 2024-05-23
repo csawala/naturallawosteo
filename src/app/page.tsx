@@ -2,11 +2,13 @@
 
 import { useRouter } from "next/navigation"
 
+import globalStyle from "./globalStyle.module.css"
+
 export default function Home() {
   const router = useRouter()
   const handleGoToAbout = () => router.push("about")
   return (
-    <main className="flex w-full flex-col items-center justify-between p-4">
+    <main className={globalStyle.page}>
       <section>
         <h1>NATURAL LAW OSTEOPATHY</h1>
         <p>
