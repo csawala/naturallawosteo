@@ -22,7 +22,7 @@ export default function RootLayout({
     >
       <body className={globalStyle.body}>
         <Header />
-        {children}
+        <div className={globalStyle.child}>{children}</div>
       </body>
     </html>
   )

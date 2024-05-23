@@ -32,5 +32,5 @@
 
 /* small screens need overlay positions reversed due to reverse-row */
 .menuOverlay {
-  @apply fixed bottom-0 right-0 md:-top-5 md:-left-4 md:right-0 md:bottom-0 bg-black/15 h-screen w-screen
+  @apply fixed bottom-0 right-0 sm:-top-5 sm:-left-4 sm:right-0 sm:bottom-0 bg-black/15 h-screen w-screen
 }
