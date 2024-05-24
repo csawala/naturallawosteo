@@ -7,11 +7,11 @@ import {
   PopoverPanel,
   Transition,
 } from "@headlessui/react"
+import clsx from "clsx"
 import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
 
 import { LinkName, Links } from "@/tools/Links"
-import clsx from "clsx"
 import LogoWithLabel from "../../public/logoWithLabel.png"
 import Button from "./Button"
 import MenuIcon from "./Icons/MenuIcon"

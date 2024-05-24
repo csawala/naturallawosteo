@@ -23,7 +23,7 @@
 }
 
 .menu {
-  @apply flex flex-col bg-white rounded-md
+  @apply flex flex-col bg-white rounded-md shadow-md
 }
 
 .menuButton {
