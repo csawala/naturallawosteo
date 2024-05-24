@@ -23,11 +23,19 @@
 }
 
 .menu {
-  @apply flex flex-col gap-y-2 bg-white rounded-md
+  @apply flex flex-col bg-white rounded-md
 }
 
 .menuButton {
-  @apply py-3 px-4 items-center justify-center text-sm
+  @apply py-3 px-4 h-14 md:h-10 items-center justify-center text-sm
+}
+
+.menuButton:hover {
+  @apply bg-purple/15
+}
+
+.menuButtonSelected {
+  @apply bg-purple/30
 }
 
 /* small screens need overlay positions reversed due to reverse-row */

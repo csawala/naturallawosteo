@@ -8,8 +8,10 @@ import {
   Transition,
 } from "@headlessui/react"
 import Image from "next/image"
-import { useRouter } from "next/navigation"
+import { usePathname, useRouter } from "next/navigation"
 
+import { LinkName, Links } from "@/tools/Links"
+import clsx from "clsx"
 import LogoWithLabel from "../../public/logoWithLabel.png"
 import Button from "./Button"
 import MenuIcon from "./Icons/MenuIcon"
@@ -17,9 +19,11 @@ import style from "./styles/Header.module.css"
 
 const Header = () => {
   const router = useRouter()
-  const handleGoToBook = () => router.push("book")
-  const handleGoToAbout = () => router.push("about")
-  const handleGoToHome = () => router.push("/")
+  const pathname = usePathname()
+
+  const handleGoToBook = () => router.push(Links.Book)
+  const handleGoToAbout = () => router.push(Links.About)
+  const handleGoToHome = () => router.push(Links.Home)
   const handleNavigate = (close: () => void, path: string) => {
     router.push(path)
     close()
@@ -38,13 +42,13 @@ const Header = () => {
         <div className={style.buttonContainer}>
           <div className={style.buttons}>
             <Button onClick={handleGoToAbout} variant="secondary">
-              About
+              {LinkName[Links.About]}
             </Button>
             <Button onClick={handleGoToAbout} variant="outline">
-              What is Osteopathy?
+              {LinkName[Links.WhatIsOsteopathy]}
             </Button>
             <Button onClick={handleGoToAbout} variant="text">
-              Frequently Asked Questions
+              {LinkName[Links.FAQ]}
             </Button>
           </div>
           <Button onClick={handleGoToBook}>Book</Button>
@@ -70,22 +74,34 @@ const Header = () => {
                   {({ close }) => (
                     <>
                       <button
-                        className={style.menuButton}
-                        onClick={() => handleNavigate(close, "about")}
+                        className={clsx(
+                          style.menuButton,
+                          pathname === Links.About && style.menuButtonSelected,
+                        )}
+                        onClick={() => handleNavigate(close, Links.About)}
                       >
-                        About
+                        {LinkName[Links.About]}
                       </button>
                       <button
-                        className={style.menuButton}
-                        onClick={() => handleNavigate(close, "osteopathy")}
+                        className={clsx(
+                          style.menuButton,
+                          pathname === Links.WhatIsOsteopathy &&
+                            style.menuButtonSelected,
+                        )}
+                        onClick={() =>
+                          handleNavigate(close, Links.WhatIsOsteopathy)
+                        }
                       >
-                        What is Osteopathy?
+                        {LinkName[Links.WhatIsOsteopathy]}
                       </button>
                       <button
-                        className={style.menuButton}
-                        onClick={() => handleNavigate(close, "faq")}
+                        className={clsx(
+                          style.menuButton,
+                          pathname === Links.FAQ && style.menuButtonSelected,
+                        )}
+                        onClick={() => handleNavigate(close, Links.FAQ)}
                       >
-                        Frequently Asked Questions
+                        {LinkName[Links.FAQ]}
                       </button>
                     </>
                   )}
