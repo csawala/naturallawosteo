@@ -2,23 +2,26 @@
   @apply items-center justify-center h-14 md:h-11 py-2 px-6 rounded-full leading-none text-sm lg:text-base shadow-md
 }
 .button:hover {
-  @apply shadow-inner
+  @apply shadow-inner pb-1
+}
+.button:focus {
+  @apply focus:outline-none
 }
 
 .primary {
-  @apply bg-primary
+  @apply bg-primary hover:bg-[#86B470] active:bg-[#7CAE64] focus:border-light focus:border-2
 }
 
 .secondary {
-  @apply bg-primaryDarkest
+  @apply bg-primaryDarkest hover:bg-[#2A3E20] active:bg-[#22311C] focus:border-primary focus:border-2
 }
 
 .outline {
-  @apply bg-white border-purple border-2
+  @apply bg-white border-purple border-[3px] hover:bg-[#E6DAEC] active:bg-purple focus:border-purple focus:border-4
 }
 
 .text {
-  @apply bg-white shadow-none
+  @apply bg-white shadow-none hover:bg-[#E6DAEC] active:bg-purple focus:border-purple focus:border-2
 }
 
 .darkText {
