@@ -1,0 +1,39 @@
+.heroContainer {
+  @apply flex items-center justify-center relative z-0
+}
+.hero {
+  @apply w-full h-full opacity-90
+}
+.heroOverlayFromBottom {
+  @apply absolute top-1/4 bottom-0 left-0 right-0 bg-gradient-to-t from-light to-75%
+}
+.heroOverlayFromTop {
+  @apply absolute -top-1 bottom-1/4 left-0 right-0 bg-gradient-to-b from-light to-50%
+}
+.heroOverlayFromLeft {
+  @apply absolute top-0 bottom-0 -left-1 right-1/4 bg-gradient-to-r from-light to-30%
+}
+.heroOverlayFromRight {
+  @apply absolute top-0 bottom-0 left-1/4 -right-1 bg-gradient-to-l from-light to-30%
+}
+
+.heroHeaderUnderlay {
+  @apply absolute top-6 rounded-full backdrop-blur-xl bg-gradient-to-b from-light/20 to-100% z-20
+}
+.heroHeader {
+  @apply text-5xl p-4
+}
+
+.heroFooterUnderlay {
+  @apply flex flex-row items-center gap-x-3 absolute bottom-1/3 rounded-full backdrop-blur-xl bg-gradient-to-t from-dark/50 to-100% z-20
+}
+.heroFooter {
+  @apply text-4xl text-white p-4
+}
+.heroFooterCta {
+  @apply z-50
+}
+
+.card {
+  @apply mb-5 -mt-40 z-40
+}
