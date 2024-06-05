@@ -10,6 +10,7 @@ interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
 
 const Button = ({
   children,
+  className,
   onClick,
   variant = "primary",
   ...buttonProps
@@ -23,6 +24,7 @@ const Button = ({
         variant === "primary" && style.primary,
         variant === "secondary" && style.secondary,
         variant === "text" && style.text,
+        className,
       )}
       onClick={onClick}
       {...buttonProps}

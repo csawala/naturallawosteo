@@ -18,10 +18,13 @@ const config: Config = {
       yellow: "#FFBF00",
     },
     extend: {
+      backgroundImage: {
+        'gradient-radial': 'radial-gradient(var(--tw-gradient-stops))',
+      },
       fontFamily: {
         cormorant: ['var(--font-cormorantGaramond)'],
         josefin: ['var(--font-josefinSans)'],
-      },
+      }
     },
   },
 };

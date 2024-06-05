@@ -1,8 +1,8 @@
 .button {
-  @apply items-center justify-center h-14 md:h-11 py-2 px-6 rounded-full leading-none text-sm lg:text-base shadow-md
+  @apply flex items-center justify-center h-14 md:h-11 py-2 px-6 rounded-full leading-none text-sm lg:text-base shadow-md bg-white
 }
 .button:hover {
-  @apply shadow-inner pb-1
+  @apply shadow-inner pb-[6px]
 }
 .button:focus {
   @apply focus:outline-none
