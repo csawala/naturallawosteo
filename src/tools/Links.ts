@@ -3,7 +3,7 @@ export enum Links {
   Book = "/book",
   FAQ = "/faq",
   Home = "/",
-  WhatIsOsteopathy = "/osteopathy",
+  WhatIsOsteo = "/osteo",
 }
 
 export const LinkName = {
@@ -11,5 +11,5 @@ export const LinkName = {
   [Links.Book]: "Book",
   [Links.FAQ]: "Frequently Asked Questions",
   [Links.Home]: "Home",
-  [Links.WhatIsOsteopathy]: "What is Osteopathy?",
+  [Links.WhatIsOsteo]: "What is Osteopathy?",
 }
