@@ -11,7 +11,7 @@ import clsx from "clsx"
 import Image from "next/image"
 import { usePathname, useRouter } from "next/navigation"
 
-import { LinkName, Links } from "@/tools/Links"
+import { LinkName, Links } from "@/tools/links"
 import LogoWithLabel from "../../public/logoWithLabel.png"
 import Button from "./Button"
 import MenuIcon from "./Icons/MenuIcon"
@@ -24,6 +24,8 @@ const Header = () => {
   const handleGoToBook = () => router.push(Links.Book)
   const handleGoToAbout = () => router.push(Links.About)
   const handleGoToHome = () => router.push(Links.Home)
+  const handleGoToWhatIsOsteo = () => router.push(Links.WhatIsOsteo)
+  const handleGoToFaq = () => router.push(Links.FAQ)
   const handleNavigate = (close: () => void, path: string) => {
     router.push(path)
     close()
@@ -45,10 +47,10 @@ const Header = () => {
               <Button onClick={handleGoToAbout} variant="secondary">
                 {LinkName[Links.About]}
               </Button>
-              <Button onClick={handleGoToAbout} variant="outline">
-                {LinkName[Links.WhatIsOsteopathy]}
+              <Button onClick={handleGoToWhatIsOsteo} variant="outline">
+                {LinkName[Links.WhatIsOsteo]}
               </Button>
-              <Button onClick={handleGoToAbout} variant="text">
+              <Button onClick={handleGoToFaq} variant="text">
                 {LinkName[Links.FAQ]}
               </Button>
             </div>
@@ -87,14 +89,14 @@ const Header = () => {
                         <button
                           className={clsx(
                             style.menuButton,
-                            pathname === Links.WhatIsOsteopathy &&
+                            pathname === Links.WhatIsOsteo &&
                               style.menuButtonSelected,
                           )}
                           onClick={() =>
-                            handleNavigate(close, Links.WhatIsOsteopathy)
+                            handleNavigate(close, Links.WhatIsOsteo)
                           }
                         >
-                          {LinkName[Links.WhatIsOsteopathy]}
+                          {LinkName[Links.WhatIsOsteo]}
                         </button>
                         <button
                           className={clsx(

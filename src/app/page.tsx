@@ -3,15 +3,16 @@
 import Image from "next/image"
 import { useRouter } from "next/navigation"
 
+import globalStyle from "@/app/globalStyle.module.css"
 import Button from "@/components/Button"
 import Card from "@/components/Card"
+import { Links } from "@/tools/links"
 import Hero from "../../public/Hero.jpg"
-import globalStyle from "./globalStyle.module.css"
 import style from "./styles/Home.module.css"
 
 export default function Home() {
   const router = useRouter()
-  const handleGoToAbout = () => router.push("about")
+  const handleGoToBook = () => router.push(Links.Book)
 
   return (
     <main className={globalStyle.page}>
@@ -34,7 +35,11 @@ export default function Home() {
 
           <div className={style.heroFooterUnderlay}>
             <h2 className={style.heroFooter}>You Want I Should Fix You Up?</h2>
-            <Button className={style.heroFooterCta} variant="outline">
+            <Button
+              className={style.heroFooterCta}
+              onClick={handleGoToBook}
+              variant="outline"
+            >
               Book an Appointment
             </Button>
           </div>
