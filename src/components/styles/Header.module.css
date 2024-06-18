@@ -1,5 +1,8 @@
 .container {
-  @apply flex justify-center items-center p-0 sm:px-4 sm:pt-5
+  @apply relative z-50
+}
+.innerContainer {
+  @apply fixed bottom-0 sm:relative sm:bottom-auto flex justify-center items-center p-0 w-full sm:px-4 sm:pt-5
 }
 
 .header {
