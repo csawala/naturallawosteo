@@ -1,0 +1,15 @@
+.card {
+  @apply flex flex-col w-full gap-y-3
+}
+
+.logoContainer {
+  @apply flex flex-col sm:flex-row gap-x-8 gap-y-3 justify-center items-center py-8 mt-5 sm:mt-2
+}
+
+.logo {
+  @apply flex w-full h-full aspect-square max-h-40 max-w-40 rounded-xl
+}
+
+.paragraph {
+  @apply text-lg
+}
