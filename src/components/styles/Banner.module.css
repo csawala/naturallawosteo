@@ -1,0 +1,23 @@
+.container {
+  @apply shadow-md w-screen h-auto
+}
+.containerBase {
+  @apply bg-white
+}
+.containerPurple {
+  @apply bg-purple
+}
+.containerGreen {
+  @apply bg-primaryDarkest
+}
+
+.content {
+  @apply max-w-screen-xl mx-auto py-6 px-8 lg:py-7 lg:px-14
+}
+.contentBase
+.contentPurple {
+  @apply text-dark
+}
+.contentGreen {
+  @apply text-light
+}
