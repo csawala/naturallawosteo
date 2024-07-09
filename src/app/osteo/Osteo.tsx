@@ -17,12 +17,16 @@ const Osteo = () => {
       <Card className={style.card}>
         <h1>What Is Osteopathy?</h1>
         <p className={style.paragraph}>
-          Discover the holistic approach of osteopathy, an alternative medicine
-          modality that addresses the body's interconnected systems. Through
-          meticulous examination, osteopaths delve deep to uncover the root
-          causes of dysfunction, focusing on anatomical relationships and
-          principles. By restoring the body's natural self-healing mechanisms,
-          osteopathy aims to enhance overall function.
+          Osteopathy is a holistic approach to healthcare that focuses on
+          diagnosing, treating, and preventing musculoskeletal issues, as well
+          as providing holistic care for various other health conditions.
+          Osteopaths use manual techniques to restore balance within the body's
+          structure, promoting overall health and well-being. This practice is
+          based on the belief that the body has the inherent ability to heal
+          itself, and osteopathic treatment aims to support this natural healing
+          process. It emphasizes the interconnectedness of the body's structure
+          and function, recognizing that dysfunction in one area can impact
+          other areas of the body.
         </p>
       </Card>
       <p>SPACER</p>
