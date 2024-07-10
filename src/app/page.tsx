@@ -4,6 +4,7 @@ import Image from "next/image"
 import { useRouter } from "next/navigation"
 
 import globalStyle from "@/app/globalStyle.module.css"
+import BallDivider from "@/components/BallDivider"
 import Button from "@/components/Button"
 import Card from "@/components/Card"
 import { Links } from "@/tools/links"
@@ -48,6 +49,22 @@ export default function Home() {
         <Card className={style.card}>
           <div className="flex flex-col gap-y-3">
             <h1>NATURAL LAW OSTEOPATHY</h1>
+
+            {/* Columns */}
+            <div className="grid grid-flow-row md:grid-flow-col gap-5 md:gap-3 w-full my-4">
+              <p className="content-center text-xl">
+                The body is a dynamic unit.
+              </p>
+              <BallDivider />
+              <p className="content-center text-xl">
+                {"The body is self-healing."}
+              </p>
+              <BallDivider />
+              <p className="content-center text-xl">
+                Structure and function are interrelated.
+              </p>
+            </div>
+
             <p className="mb-4">
               Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
               reprehenderit enim ab. Velit, ab nobis. Ab molestias odit repellat

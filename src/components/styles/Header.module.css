@@ -26,7 +26,7 @@
 }
 
 .menu {
-  @apply flex flex-col bg-white rounded-md shadow-md
+  @apply flex flex-col bg-white rounded-md shadow-md z-50
 }
 
 .menuButton {
@@ -43,5 +43,5 @@
 
 /* small screens need overlay positions reversed due to reverse-row */
 .menuOverlay {
-  @apply fixed bottom-0 right-0 sm:-top-5 sm:-left-4 sm:right-0 sm:bottom-0 bg-black/15 h-screen w-screen
+  @apply fixed bottom-0 right-0 sm:-top-5 sm:-left-4 sm:right-0 sm:bottom-0 bg-black/15 h-screen w-screen z-40
 }
