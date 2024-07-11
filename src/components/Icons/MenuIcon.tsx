@@ -1,16 +1,12 @@
-const sizeMap = {
-  large: "46",
-  medium: "38",
-  small: "30",
-}
+import { IconSizeMap } from "."
 
 interface IconProps {
   fill?: string
-  size?: keyof typeof sizeMap
+  size?: keyof typeof IconSizeMap
 }
 
 const MenuIcon = ({ fill = "#282923", size = "small" }: IconProps) => {
-  const iconSize = sizeMap[size]
+  const iconSize = IconSizeMap[size]
 
   return (
     <svg

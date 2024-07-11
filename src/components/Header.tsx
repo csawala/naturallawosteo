@@ -14,7 +14,7 @@ import { usePathname, useRouter } from "next/navigation"
 import { LinkName, Links } from "@/tools/links"
 import LogoWithLabel from "../../public/logoWithLabel.png"
 import Button from "./Button"
-import MenuIcon from "./Icons/MenuIcon"
+import { Menu } from "./Icons"
 import style from "./styles/Header.module.css"
 
 const Header = () => {
@@ -59,7 +59,7 @@ const Header = () => {
             <div className={style.menuContainer}>
               <Popover className="relative">
                 <PopoverButton className="items-center justify-center p-2">
-                  <MenuIcon />
+                  <Menu />
                 </PopoverButton>
                 <PopoverOverlay className={style.menuOverlay} />
                 <Transition
