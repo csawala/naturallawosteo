@@ -12,7 +12,7 @@ interface AccordianProps {
   className?: string
   content: Array<{
     button: string
-    panel: string
+    panel: React.ReactNode | string
   }>
 }
 
