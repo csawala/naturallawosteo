@@ -25,7 +25,9 @@ const Accordian = ({ className, content }: AccordianProps) => {
         <Disclosure key={item.button}>
           {({ open }) => (
             <>
-              <DisclosureButton className={style.button}>
+              <DisclosureButton
+                className={clsx(style.button, open && style.buttonOpen)}
+              >
                 {item.button}
                 {open ? (
                   <ChevronUp size="xsmall" />
@@ -34,7 +36,7 @@ const Accordian = ({ className, content }: AccordianProps) => {
                 )}
               </DisclosureButton>
               <DisclosurePanel className={style.panel} transition>
-                {item.panel}
+                <div className="mt-2">{item.panel}</div>
               </DisclosurePanel>
             </>
           )}

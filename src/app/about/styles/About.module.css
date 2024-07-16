@@ -14,5 +14,5 @@
 }
 
 .paragraph {
-  @apply text-lg
+  @apply text-lg mb-3
 }

@@ -3,9 +3,12 @@
 }
 
 .button {
-  @apply flex flex-row w-full items-center justify-between px-2 py-2 text-lg
+  @apply flex flex-row w-full items-center justify-between rounded px-4 py-2 text-lg hover:bg-[#E6DAEC]
+}
+.buttonOpen {
+  @apply bg-[#DDCDE5]
 }
 
 .panel {
-  @apply px-2 pt-1 pb-4 text-sm origin-top transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0
+  @apply w-full rounded-b-md px-6 pt-2 pb-3 -mt-1 mb-2 text-sm border-[#DDCDE5] border-x-2 border-b-2 border-solid origin-top transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0
 }
