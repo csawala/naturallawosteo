@@ -6,7 +6,9 @@ import {
   DisclosurePanel,
 } from "@headlessui/react"
 import clsx from "clsx"
+
 import { ChevronDown, ChevronUp } from "./Icons"
+import style from "./styles/Accordian.module.css"
 
 interface AccordianProps {
   className?: string
@@ -18,12 +20,12 @@ interface AccordianProps {
 
 const Accordian = ({ className, content }: AccordianProps) => {
   return (
-    <div className={clsx("flex flex-col items-start", className)}>
+    <div className={clsx(style.container, className)}>
       {content.map((item) => (
         <Disclosure key={item.button}>
           {({ open }) => (
             <>
-              <DisclosureButton className="flex flex-row w-full items-center justify-between px-2 py-2 text-lg">
+              <DisclosureButton className={style.button}>
                 {item.button}
                 {open ? (
                   <ChevronUp size="xsmall" />
@@ -31,7 +33,7 @@ const Accordian = ({ className, content }: AccordianProps) => {
                   <ChevronDown size="xsmall" />
                 )}
               </DisclosureButton>
-              <DisclosurePanel className="px-2 pt-1 pb-4 text-sm">
+              <DisclosurePanel className={style.panel} transition>
                 {item.panel}
               </DisclosurePanel>
             </>

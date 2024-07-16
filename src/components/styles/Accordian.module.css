@@ -1,0 +1,11 @@
+.container {
+  @apply flex flex-col items-start
+}
+
+.button {
+  @apply flex flex-row w-full items-center justify-between px-2 py-2 text-lg
+}
+
+.panel {
+  @apply px-2 pt-1 pb-4 text-sm origin-top transition duration-200 ease-out data-[closed]:-translate-y-6 data-[closed]:opacity-0
+}
