@@ -65,14 +65,32 @@ const Book = () => {
         </Button>
       </Card>
 
+      {/* A Lyrical Body */}
       <ContactCard
-        body="Soemthing something"
+        body={
+          <div>
+            <ol>
+              <li>Tuesday: 7:00am - 7:00pm</li>
+              <li>Wednesday: 7:00am - 7:00pm</li>
+              <li>Thursday: 7:00am - 7:00pm</li>
+            </ol>
+          </div>
+        }
         cta="Book Here"
         heading="A Lyrical Body"
         onClickCta={handleALyricalBody}
       />
+
+      {/* Fit for Life Physiotherapy */}
       <ContactCard
-        body="Soemthing something"
+        body={
+          <div>
+            <ol>
+              <li>Friday: 12:30pm - 4:00pm</li>
+              <li>Saturday: 9:00am - 1:00pm</li>
+            </ol>
+          </div>
+        }
         cta="Book Here"
         heading="Fit For Life Physiotherapy"
         onClickCta={handleFitForLifePhysio}
