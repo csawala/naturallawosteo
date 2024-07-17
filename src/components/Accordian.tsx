@@ -10,12 +10,14 @@ import clsx from "clsx"
 import { ChevronDown, ChevronUp } from "./Icons"
 import style from "./styles/Accordian.module.css"
 
+export interface AccordianItem {
+  button: string
+  panel: React.ReactNode | string
+}
+
 interface AccordianProps {
   className?: string
-  content: Array<{
-    button: string
-    panel: React.ReactNode | string
-  }>
+  content: Array<AccordianItem>
 }
 
 const Accordian = ({ className, content }: AccordianProps) => {

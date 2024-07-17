@@ -1,0 +1,14 @@
+.cardButton {
+  @apply self-end w-full sm:w-fit mt-3
+}
+
+.card {
+  @apply flex flex-col w-full
+}
+.contactCard {
+  @apply card mt-4
+}
+
+.cardContent {
+  @apply flex flex-col sm:flex-row justify-between
+}
