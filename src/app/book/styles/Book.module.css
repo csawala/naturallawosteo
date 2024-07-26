@@ -1,14 +1,25 @@
+.businessTimeContainer {
+  @apply grid grid-cols-3 gap-1 text-sm rounded-lg
+}
+.businessDays {
+  @apply bg-yellow/10 px-2 py-1 text-right
+}
+.businessHours {
+  @apply bg-yellow/10 px-4 py-1 col-span-2 text-center font-bold
+}
+
 .cardButton {
-  @apply self-end w-full sm:w-fit mt-3
+  @apply self-end w-full sm:w-fit mt-3 col-span-3
 }
 
 .card {
-  @apply flex flex-col w-full
+  @apply flex flex-col sm:flex-row justify-between w-full
 }
 .contactCard {
   @apply card mt-4
 }
 
 .cardContent {
-  @apply flex flex-col sm:flex-row justify-between
+  @apply flex flex-col justify-between
 }
+
