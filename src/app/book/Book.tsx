@@ -1,5 +1,6 @@
 "use client"
 
+import Image, { StaticImageData } from "next/image"
 import React from "react"
 
 import style from "@/app/book/styles/Book.module.css"
@@ -7,6 +8,8 @@ import globalStyle from "@/app/globalStyle.module.css"
 import Button from "@/components/Button"
 import Card from "@/components/Card"
 import InstagramIcon from "@/components/Icons/InstagramIcon"
+import LyricalBodyMap from "../../../public/aLyricalBodyMap.png"
+import FitForLifeMap from "../../../public/fitForLifeMap.png"
 
 const businessHours = {
   aLyricalBody: [
@@ -33,20 +36,27 @@ interface ContactCardProps {
   body: React.ReactNode
   heading: string
   hours: (string | null)[][]
+  map: StaticImageData
   onClickCta: () => void
+  onClickMap: () => void
 }
 
 const ContactCard = ({
   body,
   heading,
   hours,
+  map,
   onClickCta,
+  onClickMap,
 }: ContactCardProps) => (
   <Card className={style.contactCard}>
-    <div className="flex-col">
+    <div className="flex-col h-min">
       <h2 className="mb-2">{heading}</h2>
       {body}
     </div>
+    <button className={style.contactCardMapButton} onClick={onClickMap}>
+      <Image alt="map" className={style.contactCardMap} src={map} />
+    </button>
     <div className={style.businessTimeContainer}>
       {hours.map(([day, hours]) => (
         <React.Fragment key={`lyricalBody-${day}`}>
@@ -79,6 +89,14 @@ const Book = () => {
   const handleFitForLifePhysio = () =>
     window.open(
       "https://www.fitforlifephysio.ca/About-Us/Osteopath/Ashley-Sawala",
+    )
+  const handleALyricalBodyMap = () =>
+    window.open(
+      "https://www.google.com/maps/place/A+Lyrical+Body+Pilates+Studio/@43.3441378,-79.8053061,16z/data=!4m14!1m7!3m6!1s0x882b61dca286c157:0xde48a5ed41bbbe7c!2sA+Lyrical+Body+Pilates+Studio!8m2!3d43.3441339!4d-79.8027312!16s%2Fg%2F1tql5dw1!3m5!1s0x882b61dca286c157:0xde48a5ed41bbbe7c!8m2!3d43.3441339!4d-79.8027312!16s%2Fg%2F1tql5dw1?entry=ttu",
+    )
+  const handleFitForLifePhysioMap = () =>
+    window.open(
+      "https://www.google.com/maps/place/Fit+For+Life+Physiotherapy/@43.3062477,-79.855297,17z/data=!4m14!1m7!3m6!1s0x882c9db48f844201:0x29d14fa4cca44b4d!2sFit+For+Life+Physiotherapy!8m2!3d43.3062438!4d-79.8527221!16s%2Fg%2F1w4f8rbn!3m5!1s0x882c9db48f844201:0x29d14fa4cca44b4d!8m2!3d43.3062438!4d-79.8527221!16s%2Fg%2F1w4f8rbn?entry=ttu",
     )
 
   return (
@@ -127,7 +145,9 @@ const Book = () => {
         }
         heading="A Lyrical Body"
         hours={businessHours.aLyricalBody}
+        map={LyricalBodyMap}
         onClickCta={handleALyricalBody}
+        onClickMap={handleALyricalBodyMap}
       />
 
       {/* Fit for Life Physiotherapy */}
@@ -150,7 +170,9 @@ const Book = () => {
         }
         heading="Fit For Life Physiotherapy"
         hours={businessHours.fitForLife}
+        map={FitForLifeMap}
         onClickCta={handleFitForLifePhysio}
+        onClickMap={handleFitForLifePhysioMap}
       />
     </section>
   )

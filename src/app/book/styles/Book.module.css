@@ -16,7 +16,14 @@
   @apply flex flex-col sm:flex-row justify-between w-full
 }
 .contactCard {
-  @apply card mt-4
+  @apply w-full grid grid-cols-3 gap-4 mt-4
+}
+
+.contactCardMapButton {
+  @apply w-fit h-fit max-h-60 rounded-xl aspect-square border-yellow border-4
+}
+.contactCardMap {
+  @apply w-full h-full rounded-lg
 }
 
 .cardContent {
