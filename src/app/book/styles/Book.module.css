@@ -2,10 +2,10 @@
   @apply grid grid-cols-3 gap-1 text-sm rounded-lg order-last sm:order-2 md:order-last
 }
 .businessDays {
-  @apply bg-yellow/10 px-2 py-1 text-right
+  @apply bg-yellow/10 px-2 py-1 text-right text-dark/80 text-sm content-center
 }
 .businessHours {
-  @apply bg-yellow/10 px-4 py-1 col-span-2 text-center font-bold
+  @apply bg-yellow/10 px-4 py-1 col-span-2 text-center font-medium text-base
 }
 
 .cardButton {
