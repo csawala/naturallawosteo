@@ -50,7 +50,7 @@ const ContactCard = ({
   onClickMap,
 }: ContactCardProps) => (
   <Card className={style.contactCard}>
-    <div className="flex-col h-min">
+    <div className={style.contactCardContent}>
       <h2 className="mb-2">{heading}</h2>
       {body}
     </div>
@@ -119,8 +119,10 @@ const Book = () => {
             onClick={handleInstagramAshley}
             variant="text"
           >
-            <InstagramIcon />
-            <span className="ml-2">@Natural.Law.Osteopathy</span>
+            <div className="min-h-5 min-w-5">
+              <InstagramIcon />
+            </div>
+            <span className="ml-2 break-all">@Natural.Law.Osteopathy</span>
           </Button>
         </div>
       </Card>
@@ -135,7 +137,7 @@ const Book = () => {
               <div>L7P 2H3</div>
             </address>
             <Button
-              className="mt-3 mb-3 sm:mb-0"
+              className="mt-3"
               onClick={() => window.open("tel:+19056312300")}
               variant="text"
             >
