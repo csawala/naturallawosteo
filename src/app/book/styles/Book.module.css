@@ -2,7 +2,7 @@
   @apply grid grid-cols-3 gap-1 text-sm rounded-lg order-last sm:order-2 md:order-last
 }
 .businessDays {
-  @apply bg-yellow/10 px-2 py-1 text-right text-dark/80 text-sm content-center
+  @apply flex justify-end items-center bg-yellow/10 px-2 py-1 text-dark/80 text-sm tracking-wider
 }
 .businessHours {
   @apply bg-yellow/10 px-4 py-1 col-span-2 text-center font-medium text-base
@@ -32,3 +32,9 @@
   @apply flex flex-col justify-between
 }
 
+.hoursDashContainer {
+  @apply flex justify-center items-center h-full w-full
+}
+.hoursDash {
+  @apply w-2 h-[2px] bg-black
+}
