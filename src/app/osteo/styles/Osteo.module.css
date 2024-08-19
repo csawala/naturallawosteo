@@ -2,14 +2,21 @@
   @apply flex flex-col w-full gap-y-3
 }
 
-.logoContainer {
-  @apply flex flex-col sm:flex-row gap-x-8 gap-y-3 justify-center items-center py-8 mt-5 sm:mt-2
-}
-
-.logo {
-  @apply flex w-full h-full aspect-square max-h-40 max-w-40 rounded-xl
+.image {
+  @apply w-min h-full max-h-52 rounded-xl aspect-square mr-5 float-none sm:float-left mb-3 sm:mb-0
 }
 
 .paragraph {
   @apply text-lg
+}
+
+.quote {
+  @apply font-cormorant text-2xl italic
+}
+.quoteAttribution {
+  @apply text-lg font-light self-end
+}
+
+.banner {
+  @apply flex justify-center my-4
 }
