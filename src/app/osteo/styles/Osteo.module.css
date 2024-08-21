@@ -7,7 +7,7 @@
 }
 
 .paragraph {
-  @apply text-lg
+  @apply text-lg pb-2
 }
 
 .quote {

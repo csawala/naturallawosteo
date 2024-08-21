@@ -43,7 +43,27 @@ const Osteo = () => {
           />
           <p className={style.paragraph}>
             {
-              "Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aut impedit ipsum explicabo vel! Aperiam aliquam, accusantium nostrum perspiciatis eius ipsam esse eum nobis est dolores eligendi, repellat, et error fugiat?"
+              "Andrew Taylor Still (1828–1917) was an American physician and the founder of osteopathy and osteopathic medicine. Born in Lee County, Virginia, he grew up in a medical family and was deeply influenced by his father, who was a Methodist minister and physician."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "Still pursued a traditional medical education but became dissatisfied with the conventional medical practices of the time, especially after losing several family members to spinal meningitis in the 1860s. This personal tragedy drove him to seek alternative approaches to healthcare."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "In 1874, Still developed the foundational principles of osteopathy, emphasizing the body's ability to heal itself when in proper alignment. He believed that the musculoskeletal system played a key role in overall health and that manual manipulation could restore balance and support the body's natural healing processes."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "In 1892, Still founded the American School of Osteopathy (now A.T. Still University) in Kirksville, Missouri, which became the first institution to teach osteopathic medicine. His ideas laid the groundwork for a new branch of medicine, blending manual therapy with a holistic approach to patient care."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "Still’s contributions transformed healthcare and led to the establishment of osteopathic medicine as a recognized medical practice in the United States and beyond."
             }
           </p>
         </div>
