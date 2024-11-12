@@ -3,6 +3,7 @@ import style from "@/app/osteo/styles/Osteo.module.css"
 import Banner from "@/components/Banner"
 import Card from "@/components/Card"
 import Image from "next/image"
+import { useCallback } from "react"
 import ATStill from "../../../public/ATStill.jpg"
 
 const Quotes = [
@@ -14,7 +15,84 @@ const Quotes = [
 ]
 const RANDOM_QUOTE = Math.floor(Math.random() * Quotes.length)
 
+const KnownThings = [
+  {
+    heading: "Muscles",
+    text: "Identify each muscle's attachment points, functions, possible issues, and methods for healing and rehabilitation.",
+  },
+  {
+    heading: "Bones",
+    text: "Describe each bone’s location, shape, function, and techniques for manipulation to restore optimal positioning.",
+  },
+  {
+    heading: "Ligaments",
+    text: "Outline each ligament’s attachments, common injury mechanisms, and strategies to promote healing and recovery.",
+  },
+  {
+    heading: "Blood Vessels",
+    text: "Explain the pathways of blood flow and drainage, including a focus on circulation health.",
+  },
+  {
+    heading: "Lymphatic System",
+    text: "Understand causes of lymphatic dysfunction and major drainage sites, along with ways to support lymphatic flow.",
+  },
+  {
+    heading: "Digestive System",
+    text: "Detail the organs involved, their positioning, food processing flow, and insight into common gut conditions.",
+  },
+  {
+    heading: "Cardiovascular System",
+    text: "Examine factors positively or negatively impacting heart health and ways to support cardiovascular function.",
+  },
+  {
+    heading: "Immunology",
+    text: "Identify factors affecting immune system function and methods to strengthen immune response.",
+  },
+  {
+    heading: "Neurology",
+    text: "Emphasize the nervous system’s importance in osteopathy, understanding nerve functions, and supporting neural health.",
+  },
+  {
+    heading: "Endocrinology",
+    text: "Analyze hormone functions and effects, with an emphasis on balance and health.",
+  },
+  {
+    heading: "Biomechanics",
+    text: "Describe optimal body movement, methods to assess dysfunction, and techniques for improving biomechanics.",
+  },
+  {
+    heading: "Compensation Patterns",
+    text: "Recognize how the body compensates to maintain homeostasis under various conditions.",
+  },
+  {
+    heading: "Stress",
+    text: "Understand patients’ stress levels and how stress may contribute to their symptoms.",
+  },
+  {
+    heading: "Palpation",
+    text: "Learn how to interpret tactile information, what to feel for, and its clinical significance.",
+  },
+  {
+    heading: "Psychology",
+    text: "Explore patients’ mental frameworks and self-talk, considering the impact on their physical and mental health.",
+  },
+  {
+    heading: "Pathophysiology of Pain",
+    text: "Differentiate types of pain, associated tissues, and protocols for effective treatment.",
+  },
+  {
+    heading: "Diet/Exercise/Lifestyle",
+    text: "Assess the patient's diet, exercise, and lifestyle factors as part of holistic care.ou would like any further adjustments!",
+  },
+]
+
 const Osteo = () => {
+  const selectQuote = useCallback((quoteCall: number) => {
+    const quoteNumber =
+      quoteCall + RANDOM_QUOTE > Quotes.length ? 0 : RANDOM_QUOTE + quoteCall
+    return `"${Quotes[quoteNumber]}"`
+  }, [])
+
   return (
     <section className={globalStyle.page}>
       <Card className={style.card}>
@@ -28,7 +106,7 @@ const Osteo = () => {
 
       <Banner className={style.banner} variant="green">
         <div className="flex flex-col">
-          <span className={style.quote}>{`"${Quotes[RANDOM_QUOTE]}"`}</span>
+          <span className={style.quote}>{selectQuote(0)}</span>
           <span className={style.quoteAttribution}>- A.T. Still</span>
         </div>
       </Banner>
@@ -69,11 +147,40 @@ const Osteo = () => {
         </div>
       </Card>
 
-      <Banner className="mt-4" variant="purple">
-        <span className={style.quote}>Enter quote here</span>
+      <Banner className={style.banner} variant="purple">
+        <div className="flex flex-col">
+          <span className={style.quote}>{selectQuote(1)}</span>
+          <span className={style.quoteAttribution}>- A.T. Still</span>
+        </div>
       </Banner>
-      <Banner className="mt-4" variant="green">
-        <span className={style.quote}>Enter quote here</span>
+
+      <Card className={style.card}>
+        <h2>What Do Manual Osteopaths Need To Know?</h2>
+        <p>
+          Graduates of the Canadian Academy of Osteopathy have received training
+          that meets or exceeds international standards for graduate-level
+          education. The education is comprehensive, and the following simply
+          scratches the surface of what a graduate knows:
+        </p>
+        <div>
+          <dl>
+            {KnownThings.map(({ heading, text }) => (
+              <div className="mb-2" key={heading}>
+                <dl>
+                  <span className="italic">{heading}</span>
+                </dl>
+                <dt className="ml-2">{text}</dt>
+              </div>
+            ))}
+          </dl>
+        </div>
+      </Card>
+
+      <Banner className={style.banner} variant="green">
+        <div className="flex flex-col">
+          <span className={style.quote}>{selectQuote(2)}</span>
+          <span className={style.quoteAttribution}>- A.T. Still</span>
+        </div>
       </Banner>
     </section>
   )
