@@ -88,10 +88,11 @@ const KnownThings = [
 ]
 
 const Osteo = () => {
-  // TODO: Improve this generator
   const selectQuote = useCallback((quoteCall: number) => {
     const quoteNumber =
-      quoteCall + RANDOM_QUOTE > Quotes.length ? 0 : RANDOM_QUOTE + quoteCall
+      quoteCall + RANDOM_QUOTE > Quotes.length - 1
+        ? 0
+        : RANDOM_QUOTE + quoteCall
     return `"${Quotes[quoteNumber]}"`
   }, [])
 
