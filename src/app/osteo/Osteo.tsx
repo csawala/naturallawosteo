@@ -2,6 +2,7 @@ import globalStyle from "@/app/globalStyle.module.css"
 import style from "@/app/osteo/styles/Osteo.module.css"
 import Banner from "@/components/Banner"
 import Card from "@/components/Card"
+import { Leaf } from "@/components/Icons"
 import Image from "next/image"
 import { useCallback } from "react"
 import ATStill from "../../../public/ATStill.jpg"
@@ -147,7 +148,7 @@ const Osteo = () => {
         </div>
       </Card>
 
-      <Banner className={style.banner} variant="purple">
+      <Banner className={style.banner}>
         <div className="flex flex-col">
           <span className={style.quote}>{selectQuote(1)}</span>
           <span className={style.quoteAttribution}>- A.T. Still</span>
@@ -166,22 +167,65 @@ const Osteo = () => {
           <dl>
             {KnownThings.map(({ heading, text }) => (
               <div className="mb-2" key={heading}>
-                <dl>
-                  <span className="italic">{heading}</span>
-                </dl>
-                <dt className="ml-2">{text}</dt>
+                <dt className="flex flex-row">
+                  <Leaf
+                    className="rotate-90 mr-2"
+                    fill="primaryDark"
+                    size="xsmall"
+                  />
+                  <span className="italic font-semibold">{heading}</span>
+                </dt>
+                <dd className="ml-7">{text}</dd>
               </div>
             ))}
           </dl>
         </div>
       </Card>
 
-      <Banner className={style.banner} variant="green">
+      <Banner className={style.banner} variant="purple">
         <div className="flex flex-col">
           <span className={style.quote}>{selectQuote(2)}</span>
           <span className={style.quoteAttribution}>- A.T. Still</span>
         </div>
       </Banner>
+
+      <Card className={style.card}>
+        <h2>What Are Some Benefits of Osteopathy?</h2>
+        <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>Improved circulation</span>
+          </li>
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>Improved posture</span>
+          </li>
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>Improved mobility</span>
+          </li>
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>Improved immune function</span>
+          </li>
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>Improved mood & mental health</span>
+          </li>
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>More energy & better sleep</span>
+          </li>
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>Reduced pain & symptoms</span>
+          </li>
+          <li className="flex flex-row">
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>Reduced brain fog</span>
+          </li>
+        </ul>
+      </Card>
     </section>
   )
 }
