@@ -1,6 +1,18 @@
 import globalStyle from "@/app/globalStyle.module.css"
 import Accordian, { AccordianItem } from "@/components/Accordian"
 import Card from "@/components/Card"
+import { Leaf } from "@/components/Icons"
+
+const Benefits = [
+  "Improved circulation",
+  "Improved posture",
+  "Improved mobility",
+  "Improved immune function",
+  "Improved mood & mental health",
+  "More energy & better sleep",
+  "Reduced pain & symptoms",
+  "Reduced brain fog",
+]
 
 const Questions: Array<AccordianItem> = [
   {
@@ -17,6 +29,19 @@ const Questions: Array<AccordianItem> = [
     button: "What can Osteopathy help with?",
     panel:
       "Osteopathy is highly beneficial treatment for many common medical concerns. It can help provide relief and, in some cases cure chronic physical ailments.",
+  },
+  {
+    button: "What are the benefits of Osteopathy?",
+    panel: (
+      <ul className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3">
+        {Benefits.map((benefit) => (
+          <li className="flex flex-row items-center" key={benefit}>
+            <Leaf className="rotate-90 mr-2" fill="primaryDark" size="xsmall" />
+            <span>{benefit}</span>
+          </li>
+        ))}
+      </ul>
+    ),
   },
   {
     button: "How do osteopathic treatments work?",
