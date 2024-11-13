@@ -42,8 +42,21 @@ const Questions: Array<AccordianItem> = [
   },
   {
     button: "Are osteopathic treatments painful?",
-    panel:
-      "Everyone reacts differently to treatment. In some cases, you may be sore for a couple days afterwards, similar to muscle soreness you experience after a workout.",
+    panel: (
+      <>
+        <p className="mb-2">
+          Everyone reacts differently to treatment. In some cases, you may be
+          sore for a couple days afterwards, similar to muscle soreness you
+          experience after a workout.
+        </p>
+        <p className="mb-2">
+          The treatment itself is designed to be gentle and comfortable, working
+          in harmony with your body to ease the nervous system. This approach
+          promotes relaxation while enhancing mobility and function, with a
+          strong focus on patient comfort.
+        </p>
+      </>
+    ),
   },
   {
     button: "How many treatments will I need?",
