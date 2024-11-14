@@ -27,8 +27,20 @@ const Questions: Array<AccordianItem> = [
   },
   {
     button: "What can Osteopathy help with?",
-    panel:
-      "Osteopathy is highly beneficial treatment for many common medical concerns. It can help provide relief and, in some cases cure chronic physical ailments.",
+    panel: (
+      <>
+        <p className="mb-2">
+          {
+            "Osteopathy is a highly beneficial treatment for many common medical concerns. It can help provide relief and, in some cases cure chronic physical ailments."
+          }
+        </p>
+        <p className="mb-2">
+          {
+            "Some commmon conditions that benefit from osteopathic treatment include back pain, joint problems, headaches, and digestive issues, to name a few."
+          }
+        </p>
+      </>
+    ),
   },
   {
     button: "What are the benefits of Osteopathy?",
@@ -44,7 +56,7 @@ const Questions: Array<AccordianItem> = [
     ),
   },
   {
-    button: "How do osteopathic treatments work?",
+    button: "What should I expect during my appointment?",
     panel: (
       <>
         <p className="mb-2">
@@ -82,6 +94,19 @@ const Questions: Array<AccordianItem> = [
         </p>
       </>
     ),
+  },
+  {
+    button: "Are there any risks or side effects?",
+    panel: "",
+  },
+  {
+    button:
+      "Can osteopathic treatment be combined with other forms of medical care?",
+    panel: "",
+  },
+  {
+    button: "How long does a treatment session last?",
+    panel: "",
   },
   {
     button: "How many treatments will I need?",
