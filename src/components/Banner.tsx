@@ -6,7 +6,7 @@ import style from "./styles/Banner.module.css"
 interface BannerProps {
   children: React.ReactNode
   className?: string
-  variant?: "base" | "green" | "purple"
+  variant?: "base" | "green" | "purple" | "yellow"
 }
 
 const Banner = ({
@@ -27,6 +27,11 @@ const Banner = ({
       return {
         containerStyle: style.containerPurple,
         contentStyle: style.contentPurple,
+      }
+    } else if (variant === "yellow") {
+      return {
+        containerStyle: style.containerYellow,
+        contentStyle: style.contentYellow,
       }
     } else {
       return {
