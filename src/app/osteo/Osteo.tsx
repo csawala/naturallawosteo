@@ -1,10 +1,11 @@
+import Image from "next/image"
+import { useCallback } from "react"
+
 import globalStyle from "@/app/globalStyle.module.css"
 import style from "@/app/osteo/styles/Osteo.module.css"
 import Banner from "@/components/Banner"
 import Card from "@/components/Card"
 import { Leaf } from "@/components/Icons"
-import Image from "next/image"
-import { useCallback } from "react"
 import ATStill from "../../../public/ATStill.jpg"
 
 const Quotes = [
