@@ -82,31 +82,62 @@ const Questions: Array<AccordianItem> = [
     panel: (
       <>
         <p className="mb-2">
-          Everyone reacts differently to treatment. In some cases, you may be
-          sore for a couple days afterwards, similar to muscle soreness you
-          experience after a workout.
+          {
+            "Everyone reacts differently to treatment. In some cases, you may be sore for a couple days afterwards, similar to muscle soreness you experience after a workout."
+          }
         </p>
         <p className="mb-2">
-          The treatment itself is designed to be gentle and comfortable, working
-          in harmony with your body to ease the nervous system. This approach
-          promotes relaxation while enhancing mobility and function, with a
-          strong focus on patient comfort.
+          {
+            "The treatment itself is designed to be gentle and comfortable, working in harmony with your body to ease the nervous system. This approach promotes relaxation while enhancing mobility and function, with a strong focus on patient comfort."
+          }
         </p>
       </>
     ),
   },
   {
     button: "Are there any risks or side effects?",
-    panel: "",
+    panel: (
+      <>
+        <p className="mb-2">
+          {
+            "Yes, while osteopathic treatment is generally safe when performed by a qualified practitioner, there are some potential risks and side effects. Common, mild side effects include temporary soreness, fatigue, or slight bruising, which typically resolve within a day or two. In rare cases, people might experience dizziness, headaches, or muscle stiffness shortly after treatment."
+          }
+        </p>
+        <p className="mb-2">
+          {
+            "More serious complications, such as nerve or blood vessel damage, are extremely rare, especially when proper screening and gentle techniques are used. Patients with certain conditions—like osteoporosis, bone or joint infections, or recent fractures—should discuss their health with their osteopath to ensure a tailored, safe approach."
+          }
+        </p>
+        <p className="mb-2">
+          {
+            "Overall, osteopaths prioritize gentle techniques to minimize risk and maximize patient safety, particularly for those with specific health concerns."
+          }
+        </p>
+      </>
+    ),
   },
   {
     button:
       "Can osteopathic treatment be combined with other forms of medical care?",
-    panel: "",
+    panel: (
+      <>
+        <p className="mb-2">
+          {
+            "Yes, osteopathic treatment can be effectively combined with other forms of medical care. Osteopathy is often used as a complementary therapy alongside conventional medicine, physical therapy, or even mental health support. Many patients benefit from a holistic approach where osteopathy addresses physical alignment, mobility, and pain relief, while other treatments may target specific medical issues, rehabilitation needs, or lifestyle adjustments."
+          }
+        </p>
+        <p className="mb-2">
+          {
+            "Osteopaths frequently work in collaboration with other healthcare providers to ensure that treatments align and to support overall health goals. Open communication between your osteopath and other practitioners can help create a well-rounded, coordinated care plan tailored to your unique needs."
+          }
+        </p>
+      </>
+    ),
   },
   {
     button: "How long does a treatment session last?",
-    panel: "",
+    panel:
+      "A typical osteopathic treatment session lasts between 20 to 30 minutes, depending on the complexity of the condition and the goals of the treatment. The initial consultation may take longer, as it includes a thorough assessment of your medical history, lifestyle, and physical condition to develop a tailored treatment plan. Follow-up sessions are often shorter, focusing on specific areas and adjusting techniques as needed to support ongoing progress.",
   },
   {
     button: "How many treatments will I need?",
