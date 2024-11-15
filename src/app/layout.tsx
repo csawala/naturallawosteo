@@ -23,6 +23,7 @@ export default function RootLayout({
     >
       <body className={globalStyle.body}>
         <Header />
+        {/* TODO: Banner breaks on small screens */}
         <Banner className="mt-4 self-start" variant="yellow">
           <p className="mb-1">
             {

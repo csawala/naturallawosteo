@@ -44,10 +44,10 @@ const Header = () => {
           </button>
           <div className={style.buttonContainer}>
             <div className={style.buttons}>
-              <Button onClick={handleGoToAbout} variant="secondary">
+              <Button onClick={handleGoToAbout} variant="text">
                 {LinkName[Links.About]}
               </Button>
-              <Button onClick={handleGoToWhatIsOsteo} variant="outline">
+              <Button onClick={handleGoToWhatIsOsteo} variant="text">
                 {LinkName[Links.WhatIsOsteo]}
               </Button>
               <Button onClick={handleGoToFaq} variant="text">
