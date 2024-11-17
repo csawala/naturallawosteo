@@ -20,10 +20,10 @@
 }
 
 .heroHeaderUnderlay {
-  @apply absolute flex items-center justify-center top-14 sm:top-0 lg:top-6 h-20 w-3/4 bg-gradient-radial from-light/50 to-light/5 z-20
+  @apply absolute flex items-center justify-center top-0 lg:top-6 h-20 w-3/4 bg-gradient-radial from-light/50 to-light/5 z-20
 }
 .heroHeader {
-  @apply text-2xl sm:text-3xl md:text-4xl lg:text-5xl p-4 text-center
+  @apply text-2xl sm:text-3xl md:text-4xl p-4 text-center
 }
 
 .heroFooterUnderlay {
@@ -37,5 +37,5 @@
 }
 
 .card {
-  @apply mb-5 mt-0 sm:-mt-10 md:-mt-24 lg:-mt-40 z-40 relative
+  @apply mb-5 mt-0 sm:-mt-10 md:-mt-20 lg:-mt-32 z-40 relative
 }

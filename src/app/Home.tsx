@@ -27,11 +27,15 @@ const Home = () => {
         <div className={style.heroOverlayFromRight} />
 
         <div className={style.heroHeaderUnderlay}>
-          <h1 className={style.heroHeader}>Treating What the Body Needs</h1>
+          <h1 className={style.heroHeader}>
+            Restoring Balance, Function, and Well-Being
+          </h1>
         </div>
 
         <div className={style.heroFooterUnderlay}>
-          <h2 className={style.heroFooter}>You Want I Should Fix You Up?</h2>
+          {/* <h2 className={style.heroFooter}>
+            Supporting Your Body’s Natural Ability to Heal.
+          </h2> */}
           <Button
             className={style.heroFooterCta}
             onClick={handleGoToBook}
