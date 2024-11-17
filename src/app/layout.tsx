@@ -22,9 +22,10 @@ export default function RootLayout({
       lang="en"
     >
       <body className={globalStyle.body}>
-        <Header />
-        {/* TODO: Banner breaks on small screens */}
-        <Banner className="mt-4 self-start" variant="yellow">
+        <div className="hidden sm:block">
+          <Header />
+        </div>
+        <Banner className="mt-4" variant="yellow">
           <p className="mb-1">
             {
               "Hello! I’ll be on maternity leave for a few months, taking some time to welcome a new little one. During this period, I won’t be available for appointments, but I’ll be back soon and look forward to reconnecting with you. For temporary care options or to schedule a future appointment, feel free to reach out."
@@ -34,7 +35,12 @@ export default function RootLayout({
             {"Thank you for your understanding and support!"}
           </p>
         </Banner>
+
         <main className={globalStyle.main}>{children}</main>
+
+        <div className="block sm:hidden">
+          <Header />
+        </div>
       </body>
     </html>
   )

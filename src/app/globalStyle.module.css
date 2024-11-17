@@ -1,15 +1,15 @@
 .root {
-  @apply flex bg-light h-screen w-screen
+  @apply flex bg-light h-screen w-screen;
 }
 
 .body {
-  @apply flex flex-col-reverse sm:flex-col w-full
+  @apply flex flex-col w-full;
 }
 
 .main {
-  @apply flex items-start h-full w-full
+  @apply flex items-start h-full w-full;
 }
 
 .page {
-  @apply flex flex-col w-full items-center justify-between px-6 pt-8 pb-20 sm:pb-8 max-w-screen-xl mx-auto
+  @apply flex flex-col w-full items-center justify-between px-6 pt-8 pb-20 sm:pb-8 max-w-screen-xl mx-auto;
 }
