@@ -49,6 +49,11 @@ const About = () => {
           </p>
           <p className={style.paragraph}>
             {
+              "During her maternity leave, Ashley is excited to pursue her interest in pediatric osteopathy, expanding her expertise to include specialized care for infants, children, and their unique developmental needs."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
               "Continuing her commitment to professional growth, Ashley actively pursues ongoing education and training in osteopathy, ensuring that she remains at the forefront of her field. She is deeply passionate about empowering her clients to take an active role in their health and is grateful for the opportunity to make a positive impact in their lives."
             }
           </p>
