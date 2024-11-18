@@ -1,11 +1,11 @@
 .column {
-  @apply relative w-full md:h-full md:min-h-12 h-1 md:w-1 bg-primary
+  @apply relative w-3/4 mx-auto md:h-full md:min-h-12 h-1 md:w-1 bg-primary;
 }
 
 .columnBottom {
-  @apply absolute -left-1 md:-bottom-1 -bottom-[5px] md:-left-[5px] h-3 w-3 rounded-full bg-primary
+  @apply absolute -left-1 md:-bottom-1 -bottom-[5px] md:-left-[5px] h-3 w-3 rounded-full bg-primary;
 }
 
 .columnTop {
-  @apply absolute -right-1 md:-top-1 -top-[5px] md:-left-[5px] h-3 w-3 rounded-full bg-primary
+  @apply absolute -right-1 md:-top-1 -top-[5px] md:-left-[5px] h-3 w-3 rounded-full bg-primary;
 }

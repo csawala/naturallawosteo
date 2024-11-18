@@ -69,15 +69,15 @@ const Home = () => {
 
           {/* Columns */}
           <div className="grid grid-flow-row md:grid-flow-col gap-5 md:gap-3 w-full my-4">
-            <p className="content-center text-xl">
+            <p className="content-center text-center text-xl">
               The body is a dynamic unit.
             </p>
             <BallDivider />
-            <p className="content-center text-xl">
+            <p className="content-center text-center text-xl">
               {"The body is self-healing."}
             </p>
             <BallDivider />
-            <p className="content-center text-xl">
+            <p className="content-center text-center text-xl">
               Structure and function are interrelated.
             </p>
           </div>
