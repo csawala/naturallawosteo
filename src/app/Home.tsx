@@ -4,6 +4,7 @@ import { useRouter } from "next/navigation"
 import BallDivider from "@/components/BallDivider"
 import Button from "@/components/Button"
 import Card from "@/components/Card"
+import { NaturalLawOsteopathy } from "@/components/Icons"
 import { Links } from "@/tools/links"
 import Hero from "../../public/Hero.jpg"
 import style from "./styles/Home.module.css"
@@ -34,7 +35,7 @@ const Home = () => {
 
         <div className={style.heroFooterUnderlay}>
           {/* <h2 className={style.heroFooter}>
-            Supporting Your Body’s Natural Ability to Heal.
+            Supporting Your Body's Natural Ability to Heal.
           </h2> */}
           <Button
             className={style.heroFooterCta}
@@ -48,7 +49,23 @@ const Home = () => {
 
       <Card className={style.card}>
         <div className="flex flex-col gap-y-3">
-          <h1>NATURAL LAW OSTEOPATHY</h1>
+          <NaturalLawOsteopathy className={style.logo} />
+
+          <p className="mb-2">
+            {
+              "Welcome to Natural Law Osteopathy, where your health and well-being are my top priorities. I specialize in providing personalized osteopathic care to help you move more freely, feel stronger, and live with greater comfort. Whether you're managing pain, recovering from an injury, or looking to enhance your mobility and overall wellness, I'm here to support you every step of the way."
+            }
+          </p>
+          <p className="mb-2">
+            {
+              "With a focus on understanding your unique needs, I tailor every treatment to address the root cause of your concerns, not just the symptoms. Using gentle, hands-on techniques, I aim to restore balance and function to your body, promoting natural healing and long-term health."
+            }
+          </p>
+          <p className="mb-2">
+            {
+              "My mission is to help you achieve your health goals in a calm, professional, and welcoming environment. I look forward to partnering with you on your journey to feeling and living better."
+            }
+          </p>
 
           {/* Columns */}
           <div className="grid grid-flow-row md:grid-flow-col gap-5 md:gap-3 w-full my-4">
@@ -62,51 +79,6 @@ const Home = () => {
             <BallDivider />
             <p className="content-center text-xl">
               Structure and function are interrelated.
-            </p>
-          </div>
-
-          <p className="mb-4">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-            reprehenderit enim ab. Velit, ab nobis. Ab molestias odit repellat
-            assumenda officia vel officiis, iste doloremque doloribus totam
-            animi nostrum voluptatum.
-          </p>
-          <h1>NATURAL LAW OSTEOPATHY</h1>
-          <h2>NATURAL LAW OSTEOPATHY</h2>
-          <h3>NATURAL LAW OSTEOPATHY</h3>
-          <h4>NATURAL LAW OSTEOPATHY</h4>
-          <h5>NATURAL LAW OSTEOPATHY</h5>
-          <h6>NATURAL LAW OSTEOPATHY</h6>
-          <div className="gap-y-3">
-            <p className="text-2xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              reprehenderit enim ab. Velit, ab nobis. Ab molestias odit repellat
-              assumenda officia vel officiis, iste doloremque doloribus totam
-              animi nostrum voluptatum.
-            </p>
-            <p className="text-xl">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              reprehenderit enim ab. Velit, ab nobis. Ab molestias odit repellat
-              assumenda officia vel officiis, iste doloremque doloribus totam
-              animi nostrum voluptatum.
-            </p>
-            <p className="text-lg">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              reprehenderit enim ab. Velit, ab nobis. Ab molestias odit repellat
-              assumenda officia vel officiis, iste doloremque doloribus totam
-              animi nostrum voluptatum.
-            </p>
-            <p>
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              reprehenderit enim ab. Velit, ab nobis. Ab molestias odit repellat
-              assumenda officia vel officiis, iste doloremque doloribus totam
-              animi nostrum voluptatum.
-            </p>
-            <p className="text-sm">
-              Lorem ipsum dolor sit amet consectetur adipisicing elit. Ullam
-              reprehenderit enim ab. Velit, ab nobis. Ab molestias odit repellat
-              assumenda officia vel officiis, iste doloremque doloribus totam
-              animi nostrum voluptatum.
             </p>
           </div>
         </div>

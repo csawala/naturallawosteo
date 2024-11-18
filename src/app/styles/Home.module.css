@@ -36,6 +36,11 @@
   @apply z-50
 }
 
+/* Aspect ratio === 2.5454545455 */
+.logo {
+  @apply flex max-w-48 sm:max-w-72 md:max-w-96 mx-auto my-8
+}
+
 .card {
   @apply mb-5 mt-0 sm:-mt-10 md:-mt-20 lg:-mt-32 z-40 relative
 }
