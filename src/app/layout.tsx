@@ -28,7 +28,7 @@ export default function RootLayout({
         <Banner className="mt-4" variant="yellow">
           <p className="mb-1">
             {
-              "Hello! I’ll be on maternity leave for a few months, taking some time to welcome a new little one. During this period, I won’t be available for appointments, but I’ll be back soon and look forward to reconnecting with you. For temporary care options or to schedule a future appointment, feel free to reach out."
+              "Hello! I’ll be on maternity leave for a few months, taking some time to welcome a new little one. During this period, I won’t be available for appointments, but I’ll be back Spring 2025 and look forward to reconnecting with you. For temporary care options or to schedule a future appointment, feel free to reach out."
             }
           </p>
           <p className="text-center">
