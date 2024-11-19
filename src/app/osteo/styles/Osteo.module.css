@@ -1,22 +1,36 @@
 .card {
-  @apply flex flex-col w-full gap-y-3
+  @apply flex flex-col w-full gap-y-3;
 }
 
 .image {
-  @apply w-min h-full max-h-52 rounded-xl aspect-square mr-5 float-none sm:float-left mb-3 sm:mb-0
+  @apply w-min h-full max-h-52 rounded-xl aspect-square mr-5 float-none sm:float-left mb-3 sm:mb-0;
 }
 
 .paragraph {
-  @apply text-lg pb-2
+  @apply text-lg pb-2;
 }
 
 .quote {
-  @apply font-cormorant text-2xl italic
+  @apply font-cormorant text-2xl italic;
 }
 .quoteAttribution {
-  @apply text-lg font-light self-end
+  @apply text-lg font-light self-end;
 }
 
 .banner {
-  @apply flex justify-center my-4
+  @apply flex justify-center my-4;
+}
+
+.columnContainer {
+  @apply grid grid-flow-row md:grid-flow-col gap-5 md:gap-3 w-full my-4;
+}
+.columnText {
+  @apply content-center text-center text-xl;
+}
+
+.leafIcon {
+  @apply rotate-90 mr-2;
+}
+.leafLabel {
+  @apply italic font-semibold;
 }

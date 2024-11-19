@@ -117,7 +117,7 @@ const Osteo = () => {
       </Banner>
 
       <Card className={style.card}>
-        <div className="flex flex-col gap-y-3">
+        <div className="flex flex-col gap-y-4">
           <h2>The Foundations of Osteopathy</h2>
           <p>
             {
@@ -126,16 +126,12 @@ const Osteo = () => {
           </p>
 
           {/* Columns */}
-          <div className="grid grid-flow-row md:grid-flow-col gap-5 md:gap-3 w-full my-4">
-            <p className="content-center text-center text-xl">
-              {"The Body Is a Dynamic Unit"}
-            </p>
+          <div className={style.columnContainer}>
+            <p className={style.columnText}>{"The Body Is a Dynamic Unit"}</p>
             <BallDivider />
-            <p className="content-center text-center text-xl">
-              {"The Body Is Self-Healing"}
-            </p>
+            <p className={style.columnText}>{"The Body Is Self-Healing"}</p>
             <BallDivider />
-            <p className="content-center text-center text-xl">
+            <p className={style.columnText}>
               {"Structure and Function Are Interrelated"}
             </p>
           </div>
@@ -145,11 +141,11 @@ const Osteo = () => {
               <div className="mb-2">
                 <dt className="flex flex-row">
                   <Leaf
-                    className="rotate-90 mr-2"
+                    className={style.leafIcon}
                     fill="primaryDark"
                     size="xsmall"
                   />
-                  <span className="italic font-semibold">
+                  <span className={style.leafLabel}>
                     The Body Is a Dynamic Unit
                   </span>
                 </dt>
@@ -163,11 +159,11 @@ const Osteo = () => {
               <div className="mb-2">
                 <dt className="flex flex-row">
                   <Leaf
-                    className="rotate-90 mr-2"
+                    className={style.leafIcon}
                     fill="primaryDark"
                     size="xsmall"
                   />
-                  <span className="italic font-semibold">
+                  <span className={style.leafLabel}>
                     The Body Is Self-Healing
                   </span>
                 </dt>
@@ -180,11 +176,11 @@ const Osteo = () => {
               <div className="mb-2">
                 <dt className="flex flex-row">
                   <Leaf
-                    className="rotate-90 mr-2"
+                    className={style.leafIcon}
                     fill="primaryDark"
                     size="xsmall"
                   />
-                  <span className="italic font-semibold">
+                  <span className={style.leafLabel}>
                     Structure and Function Are Interrelated
                   </span>
                 </dt>
@@ -197,12 +193,14 @@ const Osteo = () => {
             </dl>
           </div>
 
-          <h2>Why These Principles Matter</h2>
-          <p>
-            {
-              "These principles shape every aspect of osteopathic care, allowing us to look beyond symptoms and focus on the root cause of discomfort. By understanding your body as a whole, we aim to help you feel and move better, naturally."
-            }
-          </p>
+          <div>
+            <h3 className="text-xl">Why These Principles Matter</h3>
+            <p>
+              {
+                "These principles shape every aspect of osteopathic care, allowing us to look beyond symptoms and focus on the root cause of discomfort. By understanding your body as a whole, we aim to help you feel and move better, naturally."
+              }
+            </p>
+          </div>
         </div>
       </Card>
 
@@ -213,13 +211,13 @@ const Osteo = () => {
         </div>
       </Banner>
 
+      <div id="OsteoKnowledge" />
       <Card className={style.card}>
         <h2>What Do Manual Osteopaths Need To Know?</h2>
         <p>
-          Graduates of the Canadian Academy of Osteopathy have received training
-          that meets or exceeds international standards for graduate-level
-          education. The education is comprehensive, and the following simply
-          scratches the surface of what a graduate knows:
+          {
+            "Graduates of the Canadian Academy of Osteopathy have received training that meets or exceeds international standards for graduate-level education. The education is comprehensive, and the following simply scratches the surface of what a graduate knows:"
+          }
         </p>
         <div>
           <dl>
@@ -227,11 +225,11 @@ const Osteo = () => {
               <div className="mb-2" key={heading}>
                 <dt className="flex flex-row">
                   <Leaf
-                    className="rotate-90 mr-2"
+                    className={style.leafIcon}
                     fill="primaryDark"
                     size="xsmall"
                   />
-                  <span className="italic font-semibold">{heading}</span>
+                  <span className={style.leafLabel}>{heading}</span>
                 </dt>
                 <dd className="ml-7">{text}</dd>
               </div>
