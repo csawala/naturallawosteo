@@ -3,6 +3,7 @@ import { useCallback } from "react"
 
 import globalStyle from "@/app/globalStyle.module.css"
 import style from "@/app/osteo/styles/Osteo.module.css"
+import BallDivider from "@/components/BallDivider"
 import Banner from "@/components/Banner"
 import Card from "@/components/Card"
 import { Leaf } from "@/components/Icons"
@@ -116,36 +117,90 @@ const Osteo = () => {
       </Banner>
 
       <Card className={style.card}>
-        <h2>Andrew Taylor Still</h2>
-        <div>
-          <Image
-            alt="A.T. Still holding a femur"
-            className={style.image}
-            src={ATStill}
-          />
-          <p className={style.paragraph}>
+        <div className="flex flex-col gap-y-3">
+          <h2>The Foundations of Osteopathy</h2>
+          <p>
             {
-              "Andrew Taylor Still (1828–1917) was an American physician and the founder of osteopathy and osteopathic medicine. Born in Lee County, Virginia, he grew up in a medical family and was deeply influenced by his father, who was a Methodist minister and physician."
+              "At the heart of osteopathy lie three core principles that guide every treatment, ensuring a holistic approach to your health and well-being."
             }
           </p>
-          <p className={style.paragraph}>
+
+          {/* Columns */}
+          <div className="grid grid-flow-row md:grid-flow-col gap-5 md:gap-3 w-full my-4">
+            <p className="content-center text-center text-xl">
+              {"The Body Is a Dynamic Unit"}
+            </p>
+            <BallDivider />
+            <p className="content-center text-center text-xl">
+              {"The Body Is Self-Healing"}
+            </p>
+            <BallDivider />
+            <p className="content-center text-center text-xl">
+              {"Structure and Function Are Interrelated"}
+            </p>
+          </div>
+
+          <div>
+            <dl>
+              <div className="mb-2">
+                <dt className="flex flex-row">
+                  <Leaf
+                    className="rotate-90 mr-2"
+                    fill="primaryDark"
+                    size="xsmall"
+                  />
+                  <span className="italic font-semibold">
+                    The Body Is a Dynamic Unit
+                  </span>
+                </dt>
+                <dd className="ml-7">
+                  {
+                    "Your body functions as an interconnected whole, where every part influences the others. By addressing imbalances, we aim to restore harmony and support your overall health."
+                  }
+                </dd>
+              </div>
+
+              <div className="mb-2">
+                <dt className="flex flex-row">
+                  <Leaf
+                    className="rotate-90 mr-2"
+                    fill="primaryDark"
+                    size="xsmall"
+                  />
+                  <span className="italic font-semibold">
+                    The Body Is Self-Healing
+                  </span>
+                </dt>
+                <dd className="ml-7">
+                  {
+                    "The body has an innate ability to heal itself when supported correctly. Osteopathy works with your natural healing mechanisms to promote recovery and resilience."
+                  }
+                </dd>
+              </div>
+              <div className="mb-2">
+                <dt className="flex flex-row">
+                  <Leaf
+                    className="rotate-90 mr-2"
+                    fill="primaryDark"
+                    size="xsmall"
+                  />
+                  <span className="italic font-semibold">
+                    Structure and Function Are Interrelated
+                  </span>
+                </dt>
+                <dd className="ml-7">
+                  {
+                    "The way your body is built affects the way it works. By improving alignment and addressing structural issues, we help enhance your body's function and performance."
+                  }
+                </dd>
+              </div>
+            </dl>
+          </div>
+
+          <h2>Why These Principles Matter</h2>
+          <p>
             {
-              "Still pursued a traditional medical education but became dissatisfied with the conventional medical practices of the time, especially after losing several family members to spinal meningitis in the 1860s. This personal tragedy drove him to seek alternative approaches to healthcare."
-            }
-          </p>
-          <p className={style.paragraph}>
-            {
-              "In 1874, Still developed the foundational principles of osteopathy, emphasizing the body's ability to heal itself when in proper alignment. He believed that the musculoskeletal system played a key role in overall health and that manual manipulation could restore balance and support the body's natural healing processes."
-            }
-          </p>
-          <p className={style.paragraph}>
-            {
-              "In 1892, Still founded the American School of Osteopathy (now A.T. Still University) in Kirksville, Missouri, which became the first institution to teach osteopathic medicine. His ideas laid the groundwork for a new branch of medicine, blending manual therapy with a holistic approach to patient care."
-            }
-          </p>
-          <p className={style.paragraph}>
-            {
-              "Still’s contributions transformed healthcare and led to the establishment of osteopathic medicine as a recognized medical practice in the United States and beyond."
+              "These principles shape every aspect of osteopathic care, allowing us to look beyond symptoms and focus on the root cause of discomfort. By understanding your body as a whole, we aim to help you feel and move better, naturally."
             }
           </p>
         </div>
@@ -191,6 +246,42 @@ const Osteo = () => {
           <span className={style.quoteAttribution}>- A.T. Still</span>
         </div>
       </Banner>
+
+      <Card className={style.card}>
+        <h2>Andrew Taylor Still</h2>
+        <div>
+          <Image
+            alt="A.T. Still holding a femur"
+            className={style.image}
+            src={ATStill}
+          />
+          <p className={style.paragraph}>
+            {
+              "Andrew Taylor Still (1828–1917) was an American physician and the founder of osteopathy and osteopathic medicine. Born in Lee County, Virginia, he grew up in a medical family and was deeply influenced by his father, who was a Methodist minister and physician."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "Still pursued a traditional medical education but became dissatisfied with the conventional medical practices of the time, especially after losing several family members to spinal meningitis in the 1860s. This personal tragedy drove him to seek alternative approaches to healthcare."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "In 1874, Still developed the foundational principles of osteopathy, emphasizing the body's ability to heal itself when in proper alignment. He believed that the musculoskeletal system played a key role in overall health and that manual manipulation could restore balance and support the body's natural healing processes."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "In 1892, Still founded the American School of Osteopathy (now A.T. Still University) in Kirksville, Missouri, which became the first institution to teach osteopathic medicine. His ideas laid the groundwork for a new branch of medicine, blending manual therapy with a holistic approach to patient care."
+            }
+          </p>
+          <p className={style.paragraph}>
+            {
+              "Still’s contributions transformed healthcare and led to the establishment of osteopathic medicine as a recognized medical practice in the United States and beyond."
+            }
+          </p>
+        </div>
+      </Card>
     </section>
   )
 }
