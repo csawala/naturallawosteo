@@ -1,0 +1,17 @@
+.card {
+  @apply flex flex-col w-full;
+}
+
+.listContainer {
+  @apply grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3;
+}
+.listItem {
+  @apply flex flex-row items-center;
+}
+.listIcon {
+  @apply rotate-90 mr-2;
+}
+
+.paragraph {
+  @apply mb-2;
+}
