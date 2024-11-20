@@ -14,6 +14,7 @@ interface ModalProps {
   onClose: () => void
 }
 
+// TODO: Fix styling if this needs to be used
 const Modal = ({ children, onClose, title, visible }: ModalProps) => {
   return (
     <Dialog onClose={onClose} open={visible}>

@@ -110,14 +110,14 @@ const Osteo = () => {
       </Card>
 
       <Banner className={style.banner} variant="green">
-        <div className="flex flex-col">
+        <div className={style.bannerContent}>
           <span className={style.quote}>{selectQuote(0)}</span>
           <span className={style.quoteAttribution}>- A.T. Still</span>
         </div>
       </Banner>
 
       <Card className={style.card}>
-        <div className="flex flex-col gap-y-4">
+        <div className={style.foundationsContainer}>
           <h2>The Foundations of Osteopathy</h2>
           <p>
             {
@@ -139,7 +139,7 @@ const Osteo = () => {
           <div>
             <dl>
               <div className="mb-2">
-                <dt className="flex flex-row">
+                <dt className={style.descriptionTitle}>
                   <Leaf
                     className={style.leafIcon}
                     fill="primaryDark"
@@ -149,7 +149,7 @@ const Osteo = () => {
                     The Body Is a Dynamic Unit
                   </span>
                 </dt>
-                <dd className="ml-7">
+                <dd className={style.description}>
                   {
                     "Your body functions as an interconnected whole, where every part influences the others. By addressing imbalances, we aim to restore harmony and support your overall health."
                   }
@@ -157,7 +157,7 @@ const Osteo = () => {
               </div>
 
               <div className="mb-2">
-                <dt className="flex flex-row">
+                <dt className={style.descriptionTitle}>
                   <Leaf
                     className={style.leafIcon}
                     fill="primaryDark"
@@ -167,14 +167,14 @@ const Osteo = () => {
                     The Body Is Self-Healing
                   </span>
                 </dt>
-                <dd className="ml-7">
+                <dd className={style.description}>
                   {
                     "The body has an innate ability to heal itself when supported correctly. Osteopathy works with your natural healing mechanisms to promote recovery and resilience."
                   }
                 </dd>
               </div>
               <div className="mb-2">
-                <dt className="flex flex-row">
+                <dt className={style.descriptionTitle}>
                   <Leaf
                     className={style.leafIcon}
                     fill="primaryDark"
@@ -184,7 +184,7 @@ const Osteo = () => {
                     Structure and Function Are Interrelated
                   </span>
                 </dt>
-                <dd className="ml-7">
+                <dd className={style.description}>
                   {
                     "The way your body is built affects the way it works. By improving alignment and addressing structural issues, we help enhance your body's function and performance."
                   }
@@ -205,7 +205,7 @@ const Osteo = () => {
       </Card>
 
       <Banner className={style.banner} variant="purple">
-        <div className="flex flex-col">
+        <div className={style.bannerContent}>
           <span className={style.quote}>{selectQuote(1)}</span>
           <span className={style.quoteAttribution}>- A.T. Still</span>
         </div>
@@ -223,7 +223,7 @@ const Osteo = () => {
           <dl>
             {KnownThings.map(({ heading, text }) => (
               <div className="mb-2" key={heading}>
-                <dt className="flex flex-row">
+                <dt className={style.descriptionTitle}>
                   <Leaf
                     className={style.leafIcon}
                     fill="primaryDark"
@@ -231,7 +231,7 @@ const Osteo = () => {
                   />
                   <span className={style.leafLabel}>{heading}</span>
                 </dt>
-                <dd className="ml-7">{text}</dd>
+                <dd className={style.description}>{text}</dd>
               </div>
             ))}
           </dl>
@@ -239,7 +239,7 @@ const Osteo = () => {
       </Card>
 
       <Banner className={style.banner}>
-        <div className="flex flex-col">
+        <div className={style.bannerContent}>
           <span className={style.quote}>{selectQuote(2)}</span>
           <span className={style.quoteAttribution}>- A.T. Still</span>
         </div>

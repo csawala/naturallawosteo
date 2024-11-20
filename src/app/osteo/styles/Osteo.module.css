@@ -20,12 +20,26 @@
 .banner {
   @apply flex justify-center my-4;
 }
+.bannerContent {
+  @apply flex flex-col;
+}
 
 .columnContainer {
   @apply grid grid-flow-row md:grid-flow-col gap-5 md:gap-3 w-full my-4;
 }
 .columnText {
   @apply content-center text-center text-xl;
+}
+
+.descriptionTitle {
+  @apply flex flex-row;
+}
+.description {
+  @apply ml-7;
+}
+
+.foundationsContainer {
+  @apply flex flex-col gap-y-4;
 }
 
 .leafIcon {
